@@ -14,7 +14,7 @@ def main(argv=None):
     found_spaces = False
     for filename in args.filenames:
         count = 0
-        with open(filename) as f:
+        with open(file=filename, encoding='utf-8') as f:
             for line in f.readlines():
                 if line.startswith(" "):
                     count += 1

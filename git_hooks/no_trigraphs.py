@@ -14,7 +14,7 @@ def main(argv=None):
 
     trigraphs_present = False
     for filename in args.filenames:
-        with open(filename) as f:
+        with open(file=filename, encoding='utf-8') as f:
             found_trigraphs = re.findall(r"\?\?[=/')!<>-]", f.read())
 
             if not found_trigraphs:

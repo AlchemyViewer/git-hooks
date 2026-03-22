@@ -12,7 +12,7 @@ def main(argv=None):
 
     missing_copyright = False
     for filename in args.filenames:
-        with open(filename) as f:
+        with open(file=filename, encoding='utf-8') as f:
             if "Copyright" not in f.read():
                 eprint("{}: No copyright notice".format(filename))
                 missing_copyright = True
